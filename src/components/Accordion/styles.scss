@@ -44,10 +44,10 @@
     }
 
     .content {
+      margin: 10px 0;
       font-size: 12px;
       font-weight: 400;
       line-height: 18px;
-      padding: 10px 0;
       max-height: 0;
       overflow: hidden;
       transition: all 0.5s cubic-bezier(0, 1, 0, 1);

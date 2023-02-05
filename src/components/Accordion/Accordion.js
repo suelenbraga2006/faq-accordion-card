@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import './styles.scss';
 
-import chevron from '../../assets/images/icon-arrow-down.svg';
+import arrow from '../../assets/images/icon-arrow-down.svg';
 
 function Accordion() {
   const [questions, setQuestions] = useState([]);
@@ -32,20 +32,14 @@ function Accordion() {
                 {item.question}
               </h2>
               <img
-                src={chevron}
+                src={arrow}
                 alt="arrow"
                 className={selected === i ? 'open' : ''}
               />
             </div>
-            {selected === i ? (
-              <div className={`content ${selected === i ? 'show' : ''}`}>
-                {item.answear}
-              </div>
-            ) : null}
-
-            {/* <div className={`content ${selected === i ? 'show' : ''}`}>
+            <div className={`content ${selected === i ? 'show' : ''}`}>
               {item.answear}
-            </div> */}
+            </div>
           </div>
         );
       })}
