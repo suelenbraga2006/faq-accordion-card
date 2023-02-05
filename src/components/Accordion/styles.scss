@@ -1,0 +1,73 @@
+.container-accordion {
+  font-family: Kumbh Sans;
+  margin-top: 85px;
+
+  h1 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .item {
+    font-family: Kumbh Sans;
+    font-weight: 400;
+    padding: 15px 0;
+    border-bottom: 1px solid #e8e8ea;
+
+    .title {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        transition: all 0.5s ease;
+
+        &.open {
+          transform: rotate(180deg);
+        }
+      }
+
+      h2 {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+
+        &:hover {
+          color: #f47b56;
+        }
+
+        &.bold {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .content {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      padding: 10px 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+    }
+
+    .content.show {
+      height: auto;
+      max-height: 9999px;
+      transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .container-accordion {
+    width: 350px;
+    margin: 50px auto;
+
+    h1 {
+      text-align: left;
+    }
+  }
+}

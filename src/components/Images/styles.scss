@@ -1,0 +1,42 @@
+.boxdesktop {
+  display: none;
+}
+
+.images {
+  position: relative;
+
+  .womandesktop {
+    display: none;
+  }
+
+  .mobile {
+    position: absolute;
+    z-index: 9;
+    top: -180px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .boxdesktop {
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 200px;
+    left: -90px;
+  }
+
+  .images {
+    overflow: hidden;
+
+    .mobile {
+      display: none;
+    }
+
+    .womandesktop {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: -80px;
+    }
+  }
+}
