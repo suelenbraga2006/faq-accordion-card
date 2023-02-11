@@ -5,14 +5,42 @@ import './styles.scss';
 import arrow from '../../assets/images/icon-arrow-down.svg';
 
 function Accordion() {
-  const [questions, setQuestions] = useState([]);
+  // const [questions, setQuestions] = useState([]);
   const [selected, setSelected] = useState(false);
 
-  useEffect(() => {
-    fetch('http://localhost:3000/static/faq.json')
-      .then((response) => response.json())
-      .then(setQuestions);
-  }, []);
+  // useEffect(() => {
+  //   fetch('http://localhost:3000/static/faq.json')
+  //     .then((response) => response.json())
+  //     .then(setQuestions);
+  // }, []);
+
+  const questions = [
+    {
+      question: 'How many team members can I invite?',
+      answear:
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dignissimos aut, suscipit molestias culpa placeat vero aspernatur praesentium iure eos totam labore quas error sapiente doloribus illum, vitae voluptatum dolore!',
+    },
+    {
+      question: 'What is the maximum file upload size?',
+      answear:
+        'No more than 2GB. All files in your account must fit your allotted storage space.',
+    },
+    {
+      question: 'How do I reset my password?',
+      answear:
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dignissimos aut, suscipit molestias culpa placeat vero aspernatur praesentium iure eos totam labore quas error sapiente doloribus illum, vitae voluptatum dolore!',
+    },
+    {
+      question: 'Can I cancel my subscription?',
+      answear:
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dignissimos aut, suscipit molestias culpa placeat vero aspernatur praesentium iure eos totam labore quas error sapiente doloribus illum, vitae voluptatum dolore!',
+    },
+    {
+      question: 'Do you provide additional support?',
+      answear:
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dignissimos aut, suscipit molestias culpa placeat vero aspernatur praesentium iure eos totam labore quas error sapiente doloribus illum, vitae voluptatum dolore!',
+    },
+  ];
 
   const toggle = (i) => {
     if (selected === i) {
